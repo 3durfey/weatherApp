@@ -1,0 +1,174 @@
+body {
+  background-repeat: no-repeat;
+  background-image: url("sunny.jpeg");
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Condensed", sans-serif;
+  height: 100vh;
+}
+/*top container*/
+.title {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+}
+.sunContainer {
+  margin-top: 18px;
+  margin-left: 10px;
+}
+.top {
+  display: flex;
+  color: white;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.searchBarContainer {
+  display: flex;
+}
+#searchBar {
+  width: 300px;
+  height: 40px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 20px;
+  margin-right: 0;
+}
+.invalid {
+  border: solid red;
+  color: red;
+}
+#searchButton {
+  height: 45px;
+  width: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: 0;
+  cursor: pointer;
+}
+#locationName,
+.weekly h1 {
+  color: red;
+}
+#searchButton:hover {
+  background-color: grey;
+  color: white;
+  border: solid 1px;
+}
+#searchButton:active {
+  background: black;
+}
+/*main container*/
+.main {
+  flex-grow: 0.98;
+  min-height: 1050px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.location {
+  width: 700px;
+  height: 500px;
+  margin-bottom: 10px;
+  display: grid;
+  backdrop-filter: blur(5px);
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-gap: 5px;
+}
+/*boxes for weather info*/
+.location > * {
+  text-align: center;
+}
+#weatherInfoTitle {
+  grid-column: 1 / 10;
+  grid-row: 1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#tempInfo {
+  grid-column: 1 / 4;
+  grid-row: 2 / 6;
+}
+#conditionInfo {
+  grid-column: 1 / 4;
+  grid-row: 6 / 10;
+}
+#windInfo {
+  grid-column: 7 / 10;
+  grid-row: 2 / 6;
+}
+#rainInfo {
+  grid-column: 7 / 10;
+  grid-row: 6 / 10;
+}
+#feelsLikeInfo {
+  grid-column: 4 / 7;
+  grid-row: 2 / 6;
+}
+#humidityInfo {
+  grid-column: 4 / 7;
+  grid-row: 6 / 10;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+.infoContainer i {
+  padding-right: 20px;
+  padding-top: 12px;
+}
+.imageContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/*end weather info boxes*/
+.location > h1 {
+  text-align: center;
+}
+
+.weekly {
+  width: 600px;
+  height: 500px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+}
+.weekly > h1 {
+  text-align: center;
+}
+.day {
+  background-color: black;
+  flex-grow: 1;
+  border: solid;
+}
+/* footer */
+footer {
+  flex-grow: 0.02;
+  background-color: black;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 50px;
+  min-height: 50px;
+}
+footer > a > img {
+  background-color: black;
+  height: 30px;
+  width: 30px;
+}
+footer > a > img:hover {
+  transform: rotate(360deg);
+}
+footer > a > img {
+  transition: 0.5s ease-in-out;
+  border-radius: 20px;
+  margin-right: 30px;
+}
